@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>项目信息</title>
+</head>
+<style type="text/css">
+	table{
+		margin-top: 10px;
+	}
+</style>
+<body>
+{$result|dump}
+<foreach name="result" item="vo" >
+	<table cellpadding="5" cellspacing="0" border="1" width="800">
+		<th colspan="4">项目编号{$vo.id}</th>
+		<tr><td>项目名称</td><td>{$vo.name}</td><td>更新时间</td><td>{$vo.updated_on}</td></tr>
+		<tr><td>描述</td><td colspan="3">{$vo.description}</td></tr>
+		<tr><td>创建时间</td><td colspan="3">{$vo.created_on}</td></tr>
+	</table>
+</foreach>
+</body>
+</html>

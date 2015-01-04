@@ -1,0 +1,30 @@
+[ 2014-12-25T09:41:20+08:00 ] 127.0.0.1 /REST_Related/
+ERR: 无法加载模块:Index
+
+[ 2014-12-25T14:52:38+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%EF%BC%9Finclude=attachments,journals
+ERR: 非法操作:get？include=attachments,journals
+
+[ 2014-12-25T14:52:45+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%EF%BC%9Finclude=attachments,journals
+ERR: 非法操作:get？include=attachments,journals
+
+[ 2014-12-25T15:02:23+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%EF%BC%9Finclude=attachments,journals
+ERR: 非法操作:get？include=attachments,journals
+
+[ 2014-12-25T15:02:30+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%EF%BC%9Finclude=attachments
+ERR: 非法操作:get？include=attachments
+
+[ 2014-12-25T15:03:54+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%EF%BC%9Finclude=attachments,journals
+ERR: 非法操作:get？include=attachments,journals
+
+[ 2014-12-25T15:04:01+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/get%E3%80%81%EF%BC%9Finclude=attachments,journals
+ERR: 非法操作:get、？include=attachments,journals
+
+[ 2014-12-25T15:33:40+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/
+ERR: 非法操作:index
+
+[ 2014-12-25T16:13:09+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/posts
+ERR: Failed connect to portal.ecominfinity.com:80; No error
+
+[ 2014-12-25T16:13:52+08:00 ] 127.0.0.1 /REST_Related/index.php/Issues/posts
+ERR: Failed connect to portal.ecominfinity.com:80; No error
+
