@@ -52,6 +52,7 @@ class IssuesModel extends UrlModel{
 			//取出数据库中保存的init_isssues_id
 			$_init_id = M('Issuesid')->getfield('init_issues_id',true);
 			//判断是更新还是新建
+
 			foreach($_issues['issues'] as $_issue){
 				//判断issue_id是否在数组中，不在就新建，否则就更新数据
 				if(!in_array($_issue['id'],$_init_id)){
@@ -61,6 +62,7 @@ class IssuesModel extends UrlModel{
 						"issue"=>array(
 							  	'project_id'=>C('new_project_id'),
 							  	'subject'=>$_issue['subject'],
+							  	'description'=>$_issue['description'],
 							  	'priority_id'=>$_issue['priority']['id'],
 							  	'tracker_id'=>$_issue['tracker']['id'],
 							  	'status_id'=>$_issue['status']['id'],
@@ -97,6 +99,7 @@ class IssuesModel extends UrlModel{
 							"issue"=>array(
 								  	'project_id'=>C('new_project_id'),
 								  	'subject'=>$_issue['subject'],
+								  	'description'=>$_issue['description'],
 								  	'priority_id'=>$_issue['priority']['id'],
 								  	'tracker_id'=>$_issue['tracker']['id'],
 								  	'status_id'=>$_issue['status']['id'],
@@ -119,6 +122,7 @@ class IssuesModel extends UrlModel{
 							"issue"=>array(
 								  	'project_id'=>C('new_project_id'),
 								  	'subject'=>$_issue['subject'],
+								  	'description'=>$_issue['description'],
 								  	'priority_id'=>$_issue['priority']['id'],
 								  	'tracker_id'=>$_issue['tracker']['id'],
 								  	'status_id'=>$_issue['status']['id'],
