@@ -37,14 +37,14 @@ class IssuesModel extends UrlModel{
 	//判断issue是写入还是更新的方法
 	public function create(){
 		//获取上次更新时间
-	    	$updatetime = D('Issues')->getUpdateTime();
-	    	// $updatetime=strtotime("2014-12-25");
+	    	//$updatetime = D('Issues')->getUpdateTime();
+	    	 $updatetime=strtotime("2015-01-05");
 	    	$updatetime = date("Y-m-d",$updatetime);
 	    	//将更新时间放入GET数组
 	    	$_GET['updated_on'] =">=".$updatetime;
 	    	//更新数据库保存的时间值
-	    	$data['updatetime'] = time();
-			M('Config')->where('id=1')->save($data);
+	    	//$data['updatetime'] = time();
+			//M('Config')->where('id=1')->save($data);
 			//参数传递
 			$_params =$_GET;
 			$_issuesmodel = D('Issues');
@@ -93,7 +93,8 @@ class IssuesModel extends UrlModel{
 					//比较评论数与数据库保存评论数的大小
 					if($_journals_len>$_comments_num){
 						$_comments = array_slice($_get_issue['issue']['journals'], $_comments_num);
-						
+						foreach ($_comments as $key => $comment) {
+					
 						$_body=array(
 							"key"=>'520fe1927cbff70a5b7f8ed912658a102b10fe29',
 							"issue"=>array(
@@ -105,7 +106,7 @@ class IssuesModel extends UrlModel{
 								  	'status_id'=>$_issue['status']['id'],
 								  	'updated_on' =>$_issue['updated_on'],
 								  	'assigned_to_id' =>$_issue['assigned_to']['id'],
-								  	'notes' =>$_comments,
+								  	'notes' =>$comment['notes'],
 								  	
 								  	),
 							);
@@ -113,7 +114,8 @@ class IssuesModel extends UrlModel{
 					$data['comments'] = $_journals_len;
 					M('Issuesid') ->where("init_issues_id=".$_issue['id'])->save($data);
 				 	$_url=sprintf(C('issue.put')['url'],$_new_id);
-					$_put_issues=$_issuesmodel->put($_url,$_body,'put');
+					$_put_issues=$_issuesmodel->put($_url,$_body,'put');	
+				}
 
 				}else{
 
